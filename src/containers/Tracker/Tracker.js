@@ -47,8 +47,7 @@ export class Tracker extends Component {
       this.setState({
         records: newRecords,
         desc: '',
-        amount: '',
-        type: 'income'
+        amount: ''
       })
   }
 
@@ -79,7 +78,7 @@ export class Tracker extends Component {
             placeholder="Amount"
             value={this.state.amount}
           />
-          <select name="type" onChange={this.handleChange}>
+          <select name="type" onChange={this.handleChange} value={this.state.type}>
             <option value="income">Income</option>
             <option value="expense">Expense</option>
           </select>
